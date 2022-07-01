@@ -1,0 +1,125 @@
+@media (max-width: 1720px) {
+  .header .social {
+    position: relative;
+    z-index: 2;
+    margin-right: 0;
+  }
+  .header__burger {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 50;
+    top: 0;
+  }
+  .header__burger span {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 1px;
+    left: 0;
+    top: 9px;
+    width: 100%;
+    height: 2px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 1px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__main-logo {
+    margin-right: 0;
+    position: relative;
+    z-index: 2;
+  }
+  .header__logo {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: #000;
+    display: block;
+    text-align: center;
+  }
+  .header__menu.active {
+    top: 0;
+    margin-top: 60px;
+  }
+  .header__menu-list {
+    display: block;
+  }
+  .header__menu-item {
+    margin-right: 0;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .main__catalog {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main__catalog-item {
+    margin: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__main-logo {
+    margin-left: 10px;
+  }
+  .header .social {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  .header__main-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 150px;
+            flex: 0 0 150px;
+  }
+}
